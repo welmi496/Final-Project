@@ -1,0 +1,10 @@
+services:
+  fraud-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: fraud-detection-api:1.0
+    container_name: fraud-detection-api
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
